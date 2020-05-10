@@ -9,10 +9,10 @@ const requestProducts = () => ({
 
 const receiveProducts = (json) => ({
   type: RECEIVE_PRODUCTS,
-  products: json.map(product => product),
+  products: json.map((product) => product),
 });
 
-export const fetchProducts = () => dispatch => {
+export const fetchProducts = () => (dispatch) => {
   dispatch(requestProducts());
   const json = productApi.getProducts();
   dispatch(receiveProducts(json));

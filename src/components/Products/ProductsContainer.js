@@ -20,33 +20,33 @@ class ProductsContainer extends Component {
 
     return (
       <Fragment>
-        <Header name="Products"/>
-        <ProductsList products={products}/>
+        <Header name="Products" />
+        <ProductsList products={products} />
       </Fragment>
     );
   }
 }
 
 ProductsContainer.propTypes = {
-  products: PropTypes.array.isRequired,
+  products: PropTypes.arrayOf(PropTypes.array).isRequired,
   dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => {
   const categoriesById = getCategoriesById(state);
 
-  const products = state.products.map(product => {
-    const categories =  product.categories.map(id => categoriesById[id])
+  const products = state.products.map((product) => {
+    const categories = product.categories.map((id) => categoriesById[id]);
 
     return {
       ...product,
-      categories
+      categories,
     };
   });
 
   return {
     products,
-  }
+  };
 };
 
 export default connect(mapStateToProps)(ProductsContainer);

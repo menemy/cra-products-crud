@@ -9,10 +9,10 @@ const requestCategories = () => ({
 
 const receiveCategories = (json) => ({
   type: RECEIVE_CATEGORIES,
-  categories: json.map(category => category),
+  categories: json.map((category) => category),
 });
 
-export const fetchCategories = () => dispatch => {
+export const fetchCategories = () => (dispatch) => {
   dispatch(requestCategories());
   const json = categoryApi.getCategories();
   dispatch(receiveCategories(json));
