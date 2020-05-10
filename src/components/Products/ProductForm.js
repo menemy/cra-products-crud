@@ -90,7 +90,7 @@ class ProductForm extends Component {
             backgroundColor: 'white',
           }}
         >
-          <h2>Add Product</h2>
+          <h2>{productId ? 'Edit product' : 'Add Product'}</h2>
           <Formik
             enableReinitialize
             initialValues={productData}
