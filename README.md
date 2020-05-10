@@ -22,7 +22,9 @@ Add Create/Update/Delete features to CRA app.
 <img src="./cypress/screenshots/spec.js/Products%20Cypress%20test%20--%20adds%20product.png" width="600">
 <img src="./cypress/screenshots/spec.js/Products%20Cypress%20test%20--%20delete%20product.png" width="600">
 <img src="./cypress/screenshots/spec.js/Products%20Cypress%20test%20--%20update%20product.png" width="600">
-<video src="./cypress/videos/spec.js.mp4" width="600">
 
-### 5 Demo
+### 5 Test execution video
+https://github.com/menemy/cra-products-crud/blob/master/cypress/videos/spec.js.mp4?raw=true
+
+### 6 Demo
 https://menemy.github.io/cra-products-crud/
