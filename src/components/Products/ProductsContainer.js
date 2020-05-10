@@ -9,10 +9,15 @@ import { getCategoriesById } from '../../reducers/categories';
 
 class ProductsContainer extends Component {
   componentDidMount() {
-    const { dispatch } = this.props;
+    const { dispatch, categories, products } = this.props;
 
-    dispatch(fetchCategories());
-    dispatch(fetchProducts());
+    if (categories.length === 0) {
+      dispatch(fetchCategories());
+    }
+
+    if (products.length === 0) {
+      dispatch(fetchProducts());
+    }
   }
 
   render() {
@@ -29,6 +34,7 @@ class ProductsContainer extends Component {
 
 ProductsContainer.propTypes = {
   products: PropTypes.arrayOf(PropTypes.array).isRequired,
+  categories: PropTypes.arrayOf(PropTypes.array).isRequired,
   dispatch: PropTypes.func.isRequired,
 };
 
@@ -46,6 +52,7 @@ const mapStateToProps = (state) => {
 
   return {
     products,
+    categories: state.categories,
   };
 };
 

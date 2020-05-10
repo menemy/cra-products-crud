@@ -5,6 +5,7 @@
   "homepage": "http://menemy.github.io/cra-products-crud",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "formik": "^2.1.4",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
@@ -12,11 +13,13 @@
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
+    "react-router-prop-types": "^1.0.4",
     "react-scripts": "3.0.1",
     "reactstrap": "^8.0.0",
     "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "redux-devtools-extension": "^2.13.8"
+    "yup": "^0.28.5"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^18.1.0",

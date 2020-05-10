@@ -1,14 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Button } from 'reactstrap';
 import { chunk } from 'lodash';
+import { withRouter } from 'react-router-dom';
 import Product from './Product';
 
-const ProductList = ({ products }) => {
+const ProductList = withRouter(({ products, history }) => {
   const productsGroups = chunk(products, 3);
 
   return (
     <Container>
+      <Button
+        color="success"
+        style={{ marginBottom: '1rem' }}
+        onClick={() => {
+          history.push('/add');
+        }}
+      >
+        Add
+      </Button>
       {productsGroups.map((productsGroup, index) => (
         <Row key={String(index)} className="mb-5">
           {productsGroup.map((product) => (
@@ -20,7 +30,7 @@ const ProductList = ({ products }) => {
       ))}
     </Container>
   );
-};
+});
 
 ProductList.propTypes = {
   products: PropTypes.arrayOf(PropTypes.array).isRequired,
