@@ -7,8 +7,7 @@ context('Products Cypress test', () => {
     // usually we recommend setting baseUrl in cypress.json
     // but for simplicity of this example we just use it here
     // https://on.cypress.io/visit
-    cy.visit('http://localhost:3000');
-    // cy.visit('https://menemy.github.io/cra-products-crud/');
+    cy.visit('');
   });
 
   it('adds product', function () {

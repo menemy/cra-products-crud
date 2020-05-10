@@ -28,3 +28,16 @@ https://github.com/menemy/cra-products-crud/blob/master/cypress/videos/spec.js.m
 
 ### 6 Demo
 https://menemy.github.io/cra-products-crud/
+
+### 7 Commands
+* yarn dev-docker - Start local dev server in docker without any npm packages, listen on http://localhost:3000, support hot-reload on osx
+* yarn prod-docker - Build static spa in docker and deploy in nginx without any npm packages, listen on http://localhost
+* yarn cypress:docker - Run tests in docker with constant browser
+* yarn install - Install required npm packages
+* yarn start - Start local dev server
+* yarn lint - Check code style
+* yarn cypress:run - Start tests in headless browser
+* yarn build - Build static spa
+* yarn deploy - Build and deploy to github
+
+
