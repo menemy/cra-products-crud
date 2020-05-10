@@ -15,10 +15,14 @@ Add Create/Update/Delete features to CRA app.
 * Advanced Linting
 * Deploy to github pages
 * Dockerfiles for local use without any dependencies
+* Cypress e2e tests
 
 ### 4 Screenshot
-<img src="./examples/products.png" width="600">
-<img src="./examples/form.png" width="600">
+<img src="./cypress/screenshots/spec.js/Products%20Cypress%20test%20--%20adds%20product%20validation.png" width="600">
+<img src="./cypress/screenshots/spec.js/Products%20Cypress%20test%20--%20adds%20product.png" width="600">
+<img src="./cypress/screenshots/spec.js/Products%20Cypress%20test%20--%20delete%20product.png" width="600">
+<img src="./cypress/screenshots/spec.js/Products%20Cypress%20test%20--%20update%20product.png" width="600">
+<video src="./cypress/videos/spec.js.mp4" width="600">
 
 ### 5 Demo
 https://menemy.github.io/cra-products-crud/
