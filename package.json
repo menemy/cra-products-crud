@@ -5,6 +5,8 @@
   "homepage": "http://menemy.github.io/cra-products-crud",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "cypress": "^4.5.0",
+    "cypress-plugin-tab": "^1.0.5",
     "formik": "^2.1.4",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
@@ -42,6 +44,8 @@
     "stylelint": "stylelint **/*.css **/*.module.css",
     "stylelint-fix": "stylelint **/*.css **/*.module.css --fix",
     "lint": "yarn run eslint && yarn run stylelint",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "dev-docker": "docker run --rm -p 3000:3000 -v $(pwd):/app -it $(docker build -q .)",

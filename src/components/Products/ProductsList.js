@@ -11,6 +11,7 @@ const ProductList = withRouter(({ products, history }) => {
   return (
     <Container>
       <Button
+        className="js-add"
         color="success"
         style={{ marginBottom: '1rem' }}
         onClick={() => {
@@ -22,7 +23,7 @@ const ProductList = withRouter(({ products, history }) => {
       {productsGroups.map((productsGroup, index) => (
         <Row key={String(index)} className="mb-5">
           {productsGroup.map((product) => (
-            <Col sm="4" key={product.id}>
+            <Col sm="4" key={product.id} className="js-product">
               <Product product={product} />
             </Col>
           ))}
