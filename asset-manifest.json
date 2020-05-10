@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/cra-products-crud/static/css/main.4f4555ee.chunk.css",
+    "main.js": "/cra-products-crud/static/js/main.c0cc4ebb.chunk.js",
+    "main.js.map": "/cra-products-crud/static/js/main.c0cc4ebb.chunk.js.map",
+    "runtime~main.js": "/cra-products-crud/static/js/runtime~main.5aeee459.js",
+    "runtime~main.js.map": "/cra-products-crud/static/js/runtime~main.5aeee459.js.map",
+    "static/css/2.de424728.chunk.css": "/cra-products-crud/static/css/2.de424728.chunk.css",
+    "static/js/2.dd1c88f0.chunk.js": "/cra-products-crud/static/js/2.dd1c88f0.chunk.js",
+    "static/js/2.dd1c88f0.chunk.js.map": "/cra-products-crud/static/js/2.dd1c88f0.chunk.js.map",
+    "index.html": "/cra-products-crud/index.html",
+    "precache-manifest.ba4673b5c6f9951934316c629052f0bc.js": "/cra-products-crud/precache-manifest.ba4673b5c6f9951934316c629052f0bc.js",
+    "service-worker.js": "/cra-products-crud/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/cra-products-crud/static/css/2.de424728.chunk.css.map",
+    "static/css/main.4f4555ee.chunk.css.map": "/cra-products-crud/static/css/main.4f4555ee.chunk.css.map"
+  }
+}
