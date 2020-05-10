@@ -43,7 +43,9 @@
     "stylelint-fix": "stylelint **/*.css **/*.module.css --fix",
     "lint": "yarn run eslint && yarn run stylelint",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "dev-docker": "docker run --rm -p 3000:3000 -v $(pwd):/app -it $(docker build -q .)",
+    "prod-docker": "docker run -e --rm -p 80:80 -it $(docker build -f Dockerfile.prod -q .)"
   },
   "eslintConfig": {
     "extends": "react-app"

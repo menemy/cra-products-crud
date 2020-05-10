@@ -1,0 +1,12 @@
+FROM node:current-alpine AS builder
+WORKDIR /app
+COPY . .
+ENV PUBLIC_URL=/
+RUN yarn install --silent
+RUN yarn build
+
+
+FROM nginx:stable-alpine
+COPY --from=builder /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
