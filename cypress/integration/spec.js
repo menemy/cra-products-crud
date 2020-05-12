@@ -11,7 +11,7 @@ context('Products Cypress test', () => {
   });
 
   it('adds product', function () {
-    cy.get('.js-add').click();
+    cy.get('[data-testid=add]').click();
     cy.location().should((loc) => {
       expect(loc.href).to.include('/add');
     });
@@ -33,11 +33,11 @@ context('Products Cypress test', () => {
       .type('2020-10-10');
     cy.screenshot()
     cy.get('form').submit();
-    cy.get('.js-product').should('have.length', 4);
+    cy.get('[data-testid=product]').should('have.length', 4);
   });
 
   it('adds product validation', function () {
-    cy.get('.js-add').click();
+    cy.get('[data-testid=add]').click();
     cy.location().should((loc) => {
       expect(loc.href).to.include('/add');
     });
@@ -76,9 +76,9 @@ context('Products Cypress test', () => {
   });
 
   it('update product', function () {
-    cy.get('.js-product')
+    cy.get('[data-testid=product]')
       .eq(2)
-      .find('.js-edit')
+      .find('[data-testid=edit]')
       .click()
     cy.location().should((loc) => {
       expect(loc.href).to.include('/edit/3');
@@ -87,19 +87,19 @@ context('Products Cypress test', () => {
     cy.get('#name')
       .type('{selectall}{del}Product_changed')
     cy.get('form').submit();
-    cy.get('.js-product')
+    cy.get('[data-testid=product]')
       .eq(2)
-      .find('.js-card-name')
+      .find('[data-testid=card-name]')
       .should('have.text', 'Product_changed');
   });
 
   it('delete product', function () {
-    cy.get('.js-product')
+    cy.get('[data-testid=product]')
       .eq(1)
-      .find('.js-delete-product')
+      .find('[data-testid=delete-product]')
       .click()
-    cy.get('.js-delete-modal-confirm').click();
+    cy.get('[data-testid=delete-modal-confirm]').click();
     cy.screenshot()
-    cy.get('.js-product').should('have.length', 2);
+    cy.get('[data-testid=product]').should('have.length', 2);
   });
 });

@@ -57,7 +57,7 @@ class Product extends Component {
           <ButtonGroup size="sm">
             <Button
               color="info"
-              className="js-edit"
+              data-testid="edit"
               onClick={() => {
                 history.push(`/edit/${product.id}`);
               }}
@@ -66,7 +66,7 @@ class Product extends Component {
             </Button>
             <Button
               color="danger"
-              className="js-delete-product"
+              data-testid="delete-product"
               onClick={this.toggleDeleteModal}
             >
               Delete
@@ -79,7 +79,7 @@ class Product extends Component {
               <ModalFooter>
                 <Button
                   color="danger"
-                  className="js-delete-modal-confirm"
+                  data-testid="delete-modal-confirm"
                   onClick={() => {
                     this.toggleDeleteModal();
                     deleteProductDispatch(product.id);
@@ -95,7 +95,7 @@ class Product extends Component {
           </ButtonGroup>
         </CardHeader>
         <CardBody>
-          <CardTitle className="js-card-name">{product.name}</CardTitle>
+          <CardTitle data-testid="card-name">{product.name}</CardTitle>
           <CardText tag="div">
             <ListGroup>
               <ListGroupItem>Brand: {product.brand}</ListGroupItem>
